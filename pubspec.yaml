@@ -41,7 +41,7 @@ dependencies:
   http: ^0.13.4
   # Images
   cached_network_image: ^3.2.0 
-  image_picker: ^0.7.2+1
+  image_picker: ^0.8.5+3
   # Animate
   show_up_animation: ^2.0.0
   auto_animated: ^3.0.1
@@ -77,6 +77,7 @@ dependencies:
   responsive_builder: ^0.4.2
   image_pickers: ^2.0.0+2
   salomon_bottom_bar: ^3.3.1
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:

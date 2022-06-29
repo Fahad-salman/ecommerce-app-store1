@@ -9,27 +9,31 @@ class CustomDotOnBording extends GetView {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-       () {
-        return Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ...List.generate(
-                              onBoardingList.length,
-                              (index) => AnimatedContainer(
-                                    margin:
-                                    const EdgeInsets.symmetric(horizontal: 5),
-                                    duration: const Duration(milliseconds: 900),
-                                    width:OnBoarding.currentStep.value == index? 30 : 6,
-                                    height: 6,
-                                    decoration: BoxDecoration(
-                                      color:OnBoarding.currentStep.value == index? AppColor.PrimaryColor : AppColor.PrimaryColor.withOpacity(.6),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                  )),
-                        ],
-                      );
-      }
-    );
+   
+        return SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ...List.generate(
+                                // 1000,
+                                onBoardingList.length,
+                                (index) => AnimatedContainer(
+                                      margin:
+                                      const EdgeInsets.symmetric(horizontal: 5),
+                                      duration: const Duration(milliseconds: 900),
+                                      // width:OnBoarding.currentStep.value == index? 30 : 6,
+                                      width: 6,
+                                      height: 6,
+                                      decoration: BoxDecoration(
+                                        color: AppColor.PrimaryColor,
+                                        // color:OnBoarding.currentStep.value == index? AppColor.PrimaryColor : AppColor.PrimaryColor.withOpacity(.6),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                    )),
+                          ],
+                        ),
+        );
+    
   }
 }

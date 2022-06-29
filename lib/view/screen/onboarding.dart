@@ -9,8 +9,8 @@ import 'package:get/get.dart';
 
 class OnBoarding extends StatelessWidget {
    OnBoarding({Key? key}) : super(key: key);
- static RxInt currentStep = RxInt(0);
- static late PageController pageController = PageController(initialPage: 0,);
+//  static RxInt currentStep = RxInt(0);
+//  static late PageController pageController = PageController(initialPage: 0,);
  
 
   @override

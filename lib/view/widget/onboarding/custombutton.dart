@@ -14,13 +14,14 @@ class CustomButtonOnBording extends StatelessWidget {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                       color: AppColor.PrimaryColor,
                       height: 40,
-                      // padding: EdgeInsets.symmetric(vertical: 100 , horizontal: 4),
+                      padding: EdgeInsets.symmetric(vertical: 4 , horizontal: 100),
                       minWidth: 250,
                       onPressed: () {
-                        if(OnBoarding.currentStep.value < onBoardingList.length - 1){
-                        OnBoarding.currentStep.value++;
-                        OnBoarding.pageController.animateToPage( OnBoarding.currentStep.value, duration: const Duration(milliseconds: 900), curve: Curves.linear);
-                        }
+                        // if(OnBoarding.currentStep.value < onBoardingList.length - 1){
+                        // OnBoarding.currentStep.value++;
+                        // OnBoarding.pageController.animateToPage( OnBoarding.currentStep.value, duration: const Duration(milliseconds: 900), curve: Curves.linear);
+                        // }
+                        
                       },
                       child: const Text(
                         "Next",
