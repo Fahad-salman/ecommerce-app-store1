@@ -12,12 +12,18 @@ class CustomButtonOnBording extends GetView<OnBoardingControllerrImp> {
   Widget build(BuildContext context) {
     return Container(
                     margin: EdgeInsets.only(bottom: 25),
-                    child: MaterialButton(
+                    width: Get.width*0.60,
+                    child: 
+                    
+                    MaterialButton(
+                      
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
                       color: AppColor.PrimaryColor,
                       height: 40,
-                      padding: EdgeInsets.symmetric(vertical: 4 , horizontal: 100),
-                      minWidth: 250,
+                      padding: EdgeInsets.symmetric(vertical: 4 , horizontal: 20),
+                      minWidth: Get.width*0.60,
+                      // minWidth: 550,
+                      
                       onPressed: () {
                         controller.next();
                         // if(OnBoarding.currentStep.value < onBoardingList.length - 1){
@@ -26,14 +32,24 @@ class CustomButtonOnBording extends GetView<OnBoardingControllerrImp> {
                         // }
                         
                       },
-                      child: const Text(
-                        "Next",
+                      child:  GetBuilder<OnBoardingControllerrImp>(
+                        builder: (controller) => Text(
+                        onBoardingList[controller.currentPage].button!,
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      )
                     ),
                   );
   }
 }
+
+// Text(
+//                        controller.currentPage[onBoardingList] ,
+//                         style: TextStyle(
+//                           color: Colors.white,
+//                           fontWeight: FontWeight.bold,
+//                         ),
+//                       ),
