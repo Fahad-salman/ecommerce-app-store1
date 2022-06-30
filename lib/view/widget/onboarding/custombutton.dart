@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/controller/onboarding_controller.dart';
 import 'package:flutter_application_2/core/constant/color.dart';
 import 'package:flutter_application_2/data/datasource/static/static.dart';
 import 'package:flutter_application_2/view/screen/onboarding.dart';
+import 'package:get/get.dart';
 
-class CustomButtonOnBording extends StatelessWidget {
+class CustomButtonOnBording extends GetView<OnBoardingControllerrImp> {
   const CustomButtonOnBording({Key? key}) : super(key: key);
 
   @override
@@ -17,6 +19,7 @@ class CustomButtonOnBording extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 4 , horizontal: 100),
                       minWidth: 250,
                       onPressed: () {
+                        controller.next();
                         // if(OnBoarding.currentStep.value < onBoardingList.length - 1){
                         // OnBoarding.currentStep.value++;
                         // OnBoarding.pageController.animateToPage( OnBoarding.currentStep.value, duration: const Duration(milliseconds: 900), curve: Curves.linear);

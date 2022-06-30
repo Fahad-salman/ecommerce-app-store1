@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/controller/onboarding_controller.dart';
 // import 'package:flutter_application_2/core/constant/color.dart';
 // import 'package:flutter_application_2/data/datasource/static/static.dart';
 import 'package:flutter_application_2/view/widget/onboarding/custombutton.dart';
@@ -13,8 +14,9 @@ class OnBoarding extends StatelessWidget {
 //  static late PageController pageController = PageController(initialPage: 0,);
  
 
-  @override
+  @override  
   Widget build(BuildContext context) {
+    Get.put(OnBoardingControllerrImp());
     return SafeArea(
       child: Scaffold(
         body: Column(children: [

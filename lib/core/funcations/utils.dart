@@ -11,7 +11,7 @@ TextStyle fahadstyle(
     List<Shadow>? shadows,
     bool? isLineThrough}) {
   return GoogleFonts.poppins(
-    height: 1.7,
+      height: 1.7,
       letterSpacing: letterSpacing,
       shadows: shadows,
       fontSize: (Get.width + Get.height) * (((fontSize ?? 1.0)) / 100),

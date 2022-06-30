@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/controller/onboarding_controller.dart';
 import 'package:flutter_application_2/core/constant/color.dart';
 import 'package:flutter_application_2/core/funcations/utils.dart';
 import 'package:flutter_application_2/data/datasource/static/static.dart';
@@ -6,17 +7,18 @@ import 'package:flutter_application_2/view/screen/onboarding.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CustomSliderOnboarding extends StatelessWidget {
+class CustomSliderOnboarding extends GetView<OnBoardingControllerrImp> {
   const CustomSliderOnboarding({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
-      
+        controller: controller.pageController,
         // controller: OnBoarding.pageController,
+        // OnBoarding.currentStep.value = index;
         itemCount: onBoardingList.length,
-        onPageChanged: (index) {
-          // OnBoarding.currentStep.value = index;
+        onPageChanged: (val) {
+          controller.onPageChanged(val);
         },
         itemBuilder: ((context, i) => Column(
               children: [
