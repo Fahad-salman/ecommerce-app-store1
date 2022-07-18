@@ -27,8 +27,7 @@ class CustomSliderOnboarding extends GetView<OnBoardingControllerrImp> {
                 ),
                 Text(
                   onBoardingList[i].title!,
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold, fontSize: 20),
+                  style: Theme.of(context).textTheme.headline1,
                 ),
                 const SizedBox(
                   height: 40,
@@ -49,12 +48,7 @@ class CustomSliderOnboarding extends GetView<OnBoardingControllerrImp> {
                       child: Text(
                         onBoardingList[i].body!,
                         textAlign: TextAlign.center,
-                        style: fahadstyle(
-                          // height: 2,
-                          color: AppColor.grey,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 1.4,
-                        ),
+                        style: Theme.of(context).textTheme.bodyText1,
                       )),
                 ),
               ],

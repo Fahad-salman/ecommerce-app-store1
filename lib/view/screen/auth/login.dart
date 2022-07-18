@@ -12,7 +12,7 @@ class Login extends StatelessWidget {
       appBar: AppBar(
         title: Text("Login"),
       ),
-      body: Container(child: Center(child: Text("Login page"),)),
+      body: Container(child: Center(child: Text("صباح الخير"),)),
     );
   }
 }

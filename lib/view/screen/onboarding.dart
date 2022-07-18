@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/controller/onboarding_controller.dart';
+import 'package:flutter_application_2/core/constant/color.dart';
 // import 'package:flutter_application_2/core/constant/color.dart';
 // import 'package:flutter_application_2/data/datasource/static/static.dart';
 import 'package:flutter_application_2/view/widget/onboarding/custombutton.dart';
@@ -9,7 +10,7 @@ import 'package:get/get.dart';
 // import 'package:get/get.dart';
 
 class OnBoarding extends StatelessWidget {
-   OnBoarding({Key? key}) : super(key: key);
+   const OnBoarding({Key? key}) : super(key: key);
 //  static RxInt currentStep = RxInt(0);
 //  static late PageController pageController = PageController(initialPage: 0,);
  
@@ -19,6 +20,7 @@ class OnBoarding extends StatelessWidget {
     Get.put(OnBoardingControllerrImp());
     return SafeArea(
       child: Scaffold(
+        backgroundColor: AppColor.white,
         body: Column(children: [
           const Expanded(
             flex: 4,

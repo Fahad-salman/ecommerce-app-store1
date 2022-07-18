@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_application_2/core/constant/routes.dart';
 import 'package:flutter_application_2/data/datasource/static/static.dart';
-import 'package:flutter_application_2/view/screen/auth/login.dart';
+// import 'package:flutter_application_2/view/screen/auth/login.dart';
 import 'package:get/get.dart';
 
 abstract class OnBoardingController extends GetxController {
@@ -16,7 +17,7 @@ class OnBoardingControllerrImp extends OnBoardingController {
   next() {
     currentPage++;
     if (currentPage > onBoardingList.length -1) {
-      Get.to(Login());
+      Get.offAllNamed(AppRoute.login);
     } else {
       pageController.animateToPage(currentPage,
           duration: const Duration(milliseconds: 800), curve: Curves.linear);
